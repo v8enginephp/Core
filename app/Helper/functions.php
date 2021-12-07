@@ -384,7 +384,9 @@ function id()
 
 function can($scope)
 {
-    return auth()->can($scope);
+    if ($user = auth())
+        return $user->can($scope);
+    return false;
 }
 
 /**
