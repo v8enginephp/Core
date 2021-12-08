@@ -78,6 +78,7 @@ final class App
 
     public static function setTimezone()
     {
+        Carbon::setLocale(env('LOCALE', 'fa'));
         define("TIMEZONE", env("TIMEZONE", "Asia/Tehran"));
     }
 
