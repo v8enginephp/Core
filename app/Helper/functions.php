@@ -330,7 +330,7 @@ function method_field($method)
 }
 
 
-function listen($event, $newThis = null, &...$params)
+function listen($event, $newThis = null, ...$params)
 {
     return Event::listen($event, $newThis ?? app(), ...$params);
 }
