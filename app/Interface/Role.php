@@ -9,4 +9,6 @@ interface Role
     public function addScope(string ...$scope): Role;
 
     public static function getByTitle($title): Role;
+
+    public static function getMasterRole(): Role;
 }
