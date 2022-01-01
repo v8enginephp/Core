@@ -421,13 +421,54 @@ function filter($filter, $var)
  * @param $filter
  * @param $callback
  */
-function apply_filter($filter, $callback,$priotiy = 10)
+function apply_filter($filter, $callback, $priotiy = 10)
 {
-    Filter::apply($filter, $callback,$priotiy);
+    Filter::apply($filter, $callback, $priotiy);
 }
 
 
 function field($label, $input)
 {
     return (new \App\Helper\View\Filed\Label($label, $input))->setFormGroup(true);
+}
+
+/**
+ * @param $class Role
+ * @return void
+ * @internal
+ */
+function set_role_class(string $class)
+{
+    if (in_array(Role::class, class_implements($class))) {
+        container('role_class', $class);
+    } else
+        throw new \App\Exception\V8Exception('engine.role-class.notvalid', 'Role Class Must Implemented ' . Role::class);
+}
+
+/**
+ * @return Role
+ * @internal
+ */
+function get_role_class(): ?Role
+{
+    return app('role_class');
+}
+
+/**
+ * Get Admin Role
+ * @return Role
+ */
+function get_master_role()
+{
+    return get_role_class()::getMasterRole();
+}
+
+/**
+ * Add Permissions To Admin
+ * @param ...$scopes
+ * @return Role
+ */
+function add_scope(...$scopes)
+{
+    return get_master_role()->addScope(...$scopes);
 }
