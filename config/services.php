@@ -1,6 +1,11 @@
 <?php
 return [
     /*
+     * Whoops
+     */
+    "Whoops" => "whoops",
+
+    /*
      * Load Env
      */
     "DotEnv" => "env",
@@ -36,11 +41,6 @@ return [
     "Validator" => "validator",
 
     /*
-     * Default Config List
-     */
-    "Config" => "configs",
-
-    /*
      * Default View Properties
      */
     "View" => "view",
@@ -54,5 +54,4 @@ return [
      * Run Modules
      */
     "Module" => "module",
-
 ];

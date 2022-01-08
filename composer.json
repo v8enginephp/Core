@@ -17,7 +17,8 @@
     "illuminate/view": "^8.0",
     "illuminate/redis": "^8.47",
     "illuminate/container": "^8.0",
-    "illuminate/contracts": "^8.0"
+    "illuminate/contracts": "^8.0",
+    "filp/whoops": "^2.14"
   },
   "config": {
     "platform": {

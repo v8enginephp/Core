@@ -10,6 +10,7 @@ use App\Command\MakeModule;
 use App\Command\Migrate;
 use App\Command\ComposerDump;
 use App\Command\Route;
+use App\Command\MakeProvider;
 
 return [
     /*
@@ -56,6 +57,11 @@ return [
      * Make Middleware For Modules
      */
     "make:middleware" => MakeMiddleware::class,
+
+    /*
+     * Make Apllication Provider
+     */
+    "make:provider" => MakeProvider::class,
 
     /*
      * Composer Dumpauto For Modules

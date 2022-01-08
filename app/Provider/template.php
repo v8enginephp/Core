@@ -18,3 +18,5 @@ $templates->each(function ($template) {
      */
     template($template::getTemplateTitle(), new $template());
 });
+
+menu("config", lang('base.settings', 'Settings'), url("dashboard/config"), '', "admin.configs", "icon-settings", 9);
