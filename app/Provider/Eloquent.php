@@ -41,5 +41,4 @@ class Eloquent implements Provider
     {
         DB::swap($this->connection);
     }
-
 }

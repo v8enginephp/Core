@@ -35,7 +35,7 @@ class Request implements Provider
     private function capture()
     {
         $this->request = BaseRequest::capture();
-        $this->container->instance(Request::class, $this->request);
+        $this->container->instance(BaseRequest::class, $this->request);
     }
 
     private function router()
