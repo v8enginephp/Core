@@ -39,6 +39,7 @@
       "App\\Command\\": "app/Command",
       "App\\Model\\": "app/Database/Model",
       "App\\Boot\\": "app/Boot",
+      "App\\Provider\\": "app/Provider",
       "App\\Http\\Controller\\": "app/Http/Controller",
       "App\\Exception\\": "app/Exception"
     }

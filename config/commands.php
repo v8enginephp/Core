@@ -59,7 +59,7 @@ return [
     "make:middleware" => MakeMiddleware::class,
 
     /*
-     * Make Apllication Provider
+     * Make Application Provider
      */
     "make:provider" => MakeProvider::class,
 
