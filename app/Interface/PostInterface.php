@@ -13,10 +13,6 @@ interface PostInterface
     public function content(): string;
 
     public function excerpt(): ?string;
-
-//    public function parent() : ?PostInterface;
-//    public function metaTags(): array;
-
     
     public function tags(): ?array;
 

@@ -7,6 +7,7 @@
 
 namespace Core;
 
+use App\Helper\Provider;
 use Illuminate\Support\Collection;
 
 /**
@@ -31,7 +32,11 @@ final class ServiceProviderBootstrap
 
     private function load($provider)
     {
-        require_once self::PROVIDERS_DIR . "/" . $provider . ".php";
+        $provider = new $provider();
+        /**
+         * @var Provider $provider
+         */
+        $provider->run();
     }
 
     private function initialize(?array $services)

@@ -1,0 +1,18 @@
+<?php
+
+namespace App\Provider;
+
+use App\Helper\Provider;
+
+class %name extends Provider
+{
+    public function __construct()
+    {
+        parent::__construct();
+    }
+
+    public function run(): void
+    {
+
+    }
+}

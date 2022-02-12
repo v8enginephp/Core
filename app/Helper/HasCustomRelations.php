@@ -22,6 +22,4 @@ trait HasCustomRelations
         }
         return parent::__call($method, $arguments);
     }
-
-
 }

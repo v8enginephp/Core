@@ -1,58 +1,73 @@
 <?php
+
+use App\Provider\Blade;
+use App\Provider\Bootstrap;
+use App\Provider\Eloquent;
+use App\Provider\Env;
+use App\Provider\I18N;
+use App\Provider\Module;
+use App\Provider\Request;
+use App\Provider\Template;
+use App\Provider\Validator;
+
 return [
+//    /*
+//     * Whoops
+//     */
+//    "Whoops" => "whoops",
+
     /*
      * Load Env
      */
-    "DotEnv" => "env",
+    "env" => Env::class,
 
-    /*
-     * initialize Basics
-     */
-    "Core" => "core",
+//    /*
+//     * initialize Basics
+//     */
+//    "Core" => "core",
 
-    /*
-     * Create Redis Connection
-     */
-    "Redis" => "redis",
+//    /*
+//     * Create Redis Connection
+//     */
+//    "Redis" => "redis",
 
     /*
      * Create Database Connection
      */
-    "Database" => "database",
+    "database" => Eloquent::class,
 
     /*
      * Config Request Router
      */
-    "Router" => "request",
+    "request" => Request::class,
 
     /*
      * Set Translator for Project
      */
-    "I18N" => "i18n",
+    "i18n" => I18N::class,
 
     /*
      * Request Validator
      */
-    "Validator" => "validator",
-
-    /*
-     * Default Config List
-     */
-    "Config" => "configs",
+    "validator" => Validator::class,
 
     /*
      * Default View Properties
      */
-    "View" => "view",
+    "view" => Blade::class,
+
+    /*
+     * init user providers
+     */
+    "provider" => Bootstrap::class,
 
     /*
      * Load Templates
      */
-    "Template" => "template",
+    "template" => Template::class,
 
     /*
      * Run Modules
      */
-    "Module" => "module",
-
+    "module" => Module::class,
 ];
