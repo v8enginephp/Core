@@ -35,7 +35,8 @@
     "psr-4": {
       "Core\\": "core",
       "App\\": "app",
-      "App\\Interfaces\\": "app/Interface"
+      "App\\Interfaces\\": "app/Interface",
+      "App\\Model\\": "app/Database/Model"
     }
   },
   "license": "MIT",
