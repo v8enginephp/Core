@@ -114,7 +114,7 @@ class Module
         !$cache or $this->setCache();
     }
 
-    private function isActivated()
+    public function isActivated()
     {
         if (isset($this->config->firstTime) and $this->config->firstTime) {
             $this->config->firstTime = false;
