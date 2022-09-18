@@ -1,28 +1,28 @@
 {
   "minimum-stability": "stable",
   "require": {
-    "illuminate/routing": "^8.10",
-    "illuminate/events": "^8.10",
-    "illuminate/database": "8",
-    "illuminate/translation": "8.x-dev",
-    "illuminate/validation": "8.x-dev",
+    "illuminate/routing": "^9.30.1",
+    "illuminate/events": "^9.30.1",
+    "illuminate/database": "^9.30.1",
+    "illuminate/translation": "^9.30.1",
+    "illuminate/validation": "^9.30.1",
     "vlucas/phpdotenv": "^5.2@dev",
     "hekmatinasser/verta": "dev-master",
     "predis/predis": "2.0.x-dev",
     "guzzlehttp/guzzle": "^7.1@dev",
     "ext-json": "*",
     "monolog/monolog": "^2.2",
-    "illuminate/queue": "^8.47",
-    "illuminate/filesystem": "^8.0",
-    "illuminate/view": "^8.0",
-    "illuminate/redis": "^8.47",
-    "illuminate/container": "^8.0",
-    "illuminate/contracts": "^8.0",
+    "illuminate/queue": "^9.30.1",
+    "illuminate/filesystem": "^9.30.1",
+    "illuminate/view": "^9.30.1",
+    "illuminate/redis": "^9.30.1",
+    "illuminate/container": "^9.30.1",
+    "illuminate/contracts": "^9.30.1",
     "filp/whoops": "^2.14"
   },
   "config": {
     "platform": {
-      "php": "7.4.9"
+      "php": "8.0.2"
     },
     "preferred-install": {
       "*": "dist"
@@ -52,7 +52,7 @@
       "role": "Maintainer"
     }
   ],
-  "version": "1.1.2",
+  "version": "1.2.2",
   "name": "v8enginephp/core",
   "description": ""
 }
