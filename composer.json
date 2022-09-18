@@ -10,6 +10,7 @@
     "hekmatinasser/verta": "dev-master",
     "predis/predis": "2.0.x-dev",
     "guzzlehttp/guzzle": "^7.1@dev",
+    "ext-json": "*",
     "monolog/monolog": "^2.2",
     "illuminate/queue": "^9.30.1",
     "illuminate/filesystem": "^9.30.1",
@@ -33,7 +34,8 @@
     ],
     "psr-4": {
       "Core\\": "core",
-      "App\\": "app"
+      "App\\": "app",
+      "App\\Interfaces\\": "app/Interface"
     }
   },
   "license": "MIT",
