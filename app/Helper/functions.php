@@ -449,7 +449,7 @@ function set_role_class(string $class)
  * @return Role
  * @internal
  */
-function get_role_class(): ?Role
+function get_role_class()
 {
     return app('role_class');
 }
