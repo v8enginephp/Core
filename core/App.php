@@ -68,7 +68,7 @@ final class App
         if ($debug) {
             ini_set('display_errors', 1);
             ini_set('display_startup_errors', 1);
-            error_reporting(E_ALL);
+            error_reporting(E_ALL ^ E_DEPRECATED);
         } else {
             ini_set('display_errors', 0);
             ini_set('display_startup_errors', 0);
@@ -119,7 +119,7 @@ final class App
     public static function boot(string $bootable, $args = null)
     {
         //Check Application Base Directory
-        defined("BASEDIR") or new Exception('BASEDIR not Defined');
+        defined("BASEDIR") or  new Exception('BASEDIR not Defined');
 
 
         //Create Bootable

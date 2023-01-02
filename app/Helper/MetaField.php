@@ -62,7 +62,7 @@ class MetaField
 
     public function getType()
     {
-        return $this->type instanceof Field ? $this->type->type : $this->type;
+        return $this->type instanceof Field ? $this->type->type : (is_string($this->type) ? $this->type : strtolower(array_reverse(explode("\\",get_class($this->type)))[0]));
     }
 
     public function setController($closure)
