@@ -25,12 +25,5 @@ class Template extends Provider
              */
             template($template::getTemplateTitle(), new $template());
         });
-
-        $this->menus();
-    }
-
-    private function menus()
-    {
-        menu("config", lang('base.settings', 'Settings'), url("dashboard/config"), '', "admin.configs", "icon-settings", 9);
     }
 }

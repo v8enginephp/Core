@@ -8,7 +8,6 @@
     "illuminate/validation": "^9.30.1",
     "vlucas/phpdotenv": "^5.2@dev",
     "hekmatinasser/verta": "dev-master",
-    "predis/predis": "2.0.x-dev",
     "guzzlehttp/guzzle": "^7.1@dev",
     "ext-json": "*",
     "monolog/monolog": "^2.2",
