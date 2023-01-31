@@ -46,7 +46,7 @@
       "role": "Maintainer"
     }
   ],
-  "version": "1.0.0",
+  "version": "0.8",
   "name": "v8enginephp/core",
   "description": ""
 }
