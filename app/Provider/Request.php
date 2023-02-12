@@ -6,7 +6,13 @@ use App\Interfaces\Provider;
 use App\Kernel;
 use Core\App;
 use Illuminate\Http\Request as BaseRequest;
-use Illuminate\{Container\Container, Routing\Redirector, Routing\Router, Routing\UrlGenerator, Support\Facades\Route};
+use Illuminate\{Container\Container,
+    Routing\CallableDispatcher,
+    Routing\Redirector,
+    Routing\Router,
+    Routing\UrlGenerator,
+    Support\Facades\Route
+};
 
 class Request implements Provider
 {
@@ -21,6 +27,7 @@ class Request implements Provider
     {
         $this->app = App::instance();
         $this->container = Container::getInstance();
+        $this->container->instance('Illuminate\Routing\Contracts\CallableDispatcher', new CallableDispatcher($this->container));
     }
 
     public function run(): void

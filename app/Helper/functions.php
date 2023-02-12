@@ -228,7 +228,7 @@ function blade()
  * @return array
  * @see \App\Helper\HasTable
  */
-function column($slug, $title, $priority, $data = COLUMN_PROPERTY, $permission = null)
+function column($slug, $title, float $priority, callable|string $data = COLUMN_PROPERTY, $permission = null)
 {
     return compact("slug", "title", "data", "permission", "priority");
 }
