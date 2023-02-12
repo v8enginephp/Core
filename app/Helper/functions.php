@@ -3,7 +3,7 @@
 use App\Interfaces\Templatable;
 use App\Helper\{Validator, View\Menu, Renderable, Event, View\Notice, Filter};
 use App\Interfaces\{User, Role};
-use Core\{App, Hook, Translation, View, Cache, Container};
+use Core\{App, Translation, View, Cache, Container};
 use Illuminate\Http\Request;
 use Illuminate\Routing\Router;
 use Illuminate\Support\{Collection, HtmlString};
@@ -228,8 +228,10 @@ function blade()
  * @return array
  * @see \App\Helper\HasTable
  */
-function column($slug, $title, float $priority, callable|string $data = COLUMN_PROPERTY, $permission = null)
+function column($slug, $title = null, float $priority =null, callable|string $data = COLUMN_PROPERTY, $permission = null)
 {
+    if ($title == null)
+        $title = lang("column.".$slug,$slug);
     return compact("slug", "title", "data", "permission", "priority");
 }
 

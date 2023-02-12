@@ -27,7 +27,15 @@ trait HasTable
 
     private static function initialize()
     {
-        return self::$items = collect(static::getDefaultColumns());
+        $last = null;
+        $cols = collect(static::getDefaultColumns())->map(function ($col) use (&$last) {
+            if (is_null($col['priority'])) {
+                $col['priority'] = !is_null($last) ? $last['priority'] + 1 : 1;
+            }
+            $last = $col;
+            return $col;
+        });
+        return self::$items = $cols;
     }
 
     public static function addTableColumn($slug, $title, $data, $permission = null, $priority = 0)
